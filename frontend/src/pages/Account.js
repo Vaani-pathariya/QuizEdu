@@ -1,6 +1,7 @@
 import "./account.css"
 import logo from "../logo.jpg" 
 import sample from "../sample.jpeg"
+import { Outlet } from "react-router-dom"
 const Account=()=>{
     return(
         <div className="account">
@@ -9,14 +10,7 @@ const Account=()=>{
                 <input type="text" placeholder="Search" className="search"></input>
                 <div className="circle"><img src={sample}></img></div>
             </nav>
-            <div className="account-body">
-                <div className="blank">
-                </div>
-                <div className="blank-bottom">
-                    <h3>Blank</h3>
-                    <h4>Create new quiz</h4>
-                </div>
-            </div>
+            <Outlet></Outlet>
         </div>
     )
 }
