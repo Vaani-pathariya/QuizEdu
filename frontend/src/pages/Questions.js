@@ -9,8 +9,8 @@ const Questions=()=>{
     return (
         <div>
             <h1>enter the number of questions</h1>
-            <input type="number" placeholder="enter no." onChange={handle_number}></input>
-            <Card no={1}/>
+            <input type="number" placeholder="enter no." onChange={handle_number} value={number}></input>
+            <Card no={number}/>
         </div>
     )
 }

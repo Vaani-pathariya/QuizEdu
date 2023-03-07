@@ -24,11 +24,11 @@ const Card=(props)=>{
     return(
         <div>
             <h1>Question No. {props.no}</h1>
-            <input type="text" placeholder="enter question" onChange={handle_ques}></input>
-            <input type="text" placeholder="enter the right answer" onChange={handleright}></input>
-            <input type="text" placeholder="enter option" onChange={handleop1}></input>
-            <input type="text" placeholder="enter option" onChange={handleop2}></input>
-            <input type="text" placeholder="enter option" onChange={handleop3}></input>
+            <input type="text" placeholder="enter question" onChange={handle_ques} value={question}></input>
+            <input type="text" placeholder="enter the right answer" onChange={handleright} value={right}></input>
+            <input type="text" placeholder="enter option" onChange={handleop1} value={opt1}></input>
+            <input type="text" placeholder="enter option" onChange={handleop2} value={opt2}></input>
+            <input type="text" placeholder="enter option" onChange={handleop3} value={opt3}></input>
         </div>
     )
 }

@@ -25,8 +25,14 @@ const CreateQuiz=()=>{
     const handlePassword=(event)=>{
         setPass(event.target.value)
     }
-    const sendtodb=()=>{
-        
+    const sendtodb=async()=>{
+        const res=await fetch('https://quiz-e29a0-default-rtdb.firebaseio.com/Code.json',{
+        method:"POST",
+        Headers:{
+            "Content-Type":"application/json"
+        }
+    }
+        )
     }
     return (
         <div>
@@ -34,7 +40,7 @@ const CreateQuiz=()=>{
             <button onClick={handleClick}>Go</button>
             <div className="generated">{final_generated()}</div>
             <div>Add Password</div>
-            <input type="password" placeholder="password" onChange={handlePassword}></input>
+            <input type="password" placeholder="password" onChange={handlePassword} value={pass}></input>
             <Link to={next_page()} onClick={sendtodb}><button>Proceed</button></Link>
         </div>
 
