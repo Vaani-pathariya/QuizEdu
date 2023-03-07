@@ -30,7 +30,10 @@ const CreateQuiz=()=>{
         method:"POST",
         Headers:{
             "Content-Type":"application/json"
-        }
+        },
+        body:JSON.stringify({
+            
+        })
     }
         )
     }
