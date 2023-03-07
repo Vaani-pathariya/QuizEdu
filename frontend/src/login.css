@@ -1,0 +1,86 @@
+
+*{
+    margin:0;
+    box-sizing: border-box;
+}
+
+.para{
+    
+    color: rgba(153, 153, 153, 1); 
+        
+}
+.page{
+    height:100vh;
+    width: 50em;
+    display:flex;
+    /*justify-content:center;*/
+    justify-content: right;
+    /*align-items:center;*/
+    align-items: right;
+    background-image: url("../asserts/backg.png");
+}
+.cover{
+    background-color: white;
+    width:50%;
+    height:100%;
+    /*position:relative;*/
+    position:absolute;
+    /*border-radius: 1em;*/
+    /*box-shadow:0 0.188em 1.550em rgb(100,156,150);*/
+    flex-direction: column;
+    display: flex;
+    align-items: left;
+    padding-left: 100px;
+    padding-right: 100px;
+    justify-content: space-around;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.p{
+    background-color: rgba(153, 153, 153, 1);
+}
+.cov{
+    width: 50%;
+    height: 100%;
+    background-image: url("../asserts/backg.png");
+}
+input{
+    border:none;
+    background-color:rgb(229,226,226);
+    height:4em;
+    width:60%;
+    border-radius: 0.25em;
+    /*text-align:center;*/
+    text-align:left;
+    padding-left: 20px;
+    justify-content: left;
+}
+input:focus{
+    outline-color:rgb(32,177,255);
+}
+.login-btn{
+    width:40%;
+    height:3em;
+    color: black;
+    /*background-color:rgb(32,177,255);*/
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    transition: 0.5s;
+    border-radius: 0.25em;
+    cursor:pointer;
+    border: 2px solid rgb(32,177,255);
+    
+}
+.login-btn:hover{
+    
+    background-color: rgb(32,177,255);
+    color: white;
+}
+.signup-line{
+    font-size: 12px;
+}
+a{
+    color: rgb(32,177,255);
+}
