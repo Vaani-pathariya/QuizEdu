@@ -1,8 +1,12 @@
-
+import {Route,Routes} from "react-router-dom";
+import Account from "./pages/Account";
+import "./app.css"
 function App() {
   return (
     <div className="App">
-      hekki
+      <Routes>
+        <Route path="/account" element={<Account/>}></Route>
+      </Routes>
     </div>
   );
 }
