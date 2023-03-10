@@ -5,7 +5,7 @@ import {Link} from "react-router-dom"
 import {db} from '../firebaseConfig'
 const CreateQuiz=()=>{
     const [code,setCode]=useState(0);
-    const [pass,setPass]=useState("");
+
     const handleClick=()=>{
          //10 digit number generation
         let max=9999999999;
@@ -20,17 +20,14 @@ const CreateQuiz=()=>{
         return code;
     };
     const next_page=()=>{
-        if (final_generated()==="" || pass==="")
+        if (final_generated()==="" )
         return "/account/createquiz";
         else 
         return `/account/questions/?code=${code}`
     }
-    const handlePassword=(event)=>{
-        setPass(event.target.value)
-    }
     const sendtodb=async()=>{
         set(ref(db,`/Code/${code}`),{
-            password:pass
+            Initial:"abcdef"
         })
     }
     return (
@@ -38,8 +35,6 @@ const CreateQuiz=()=>{
             <h1>Random Code:</h1>
             <button onClick={handleClick}>Go</button>
             <div className="generated">{final_generated()}</div>
-            <div>Add Password</div>
-            <input type="password" placeholder="password" onChange={handlePassword} value={pass}></input>
             <Link to={next_page()} onClick={sendtodb}><button>Proceed</button></Link>
         </div>
 
