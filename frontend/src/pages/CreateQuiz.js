@@ -1,5 +1,8 @@
+import { ref,set } from "firebase/database";
 import { useState } from "react";
+import {uid} from 'uid';
 import {Link} from "react-router-dom"
+import {db} from '../firebaseConfig'
 const CreateQuiz=()=>{
     const [code,setCode]=useState(0);
     const [pass,setPass]=useState("");
@@ -26,16 +29,9 @@ const CreateQuiz=()=>{
         setPass(event.target.value)
     }
     const sendtodb=async()=>{
-        const res=await fetch('https://quiz-e29a0-default-rtdb.firebaseio.com/Code.json',{
-        method:"POST",
-        Headers:{
-            "Content-Type":"application/json"
-        },
-        body:JSON.stringify({
-            
+        set(ref(db,`/Code/${code}`),{
+            password:pass
         })
-    }
-        )
     }
     return (
         <div>
