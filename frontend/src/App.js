@@ -2,7 +2,7 @@
 
 import {Route,Routes} from "react-router-dom";
 import Account from "./pages/Account";
-import "./app.css"
+import "./app2.css"
 import CreateQuiz from "./pages/CreateQuiz";
 import AccountBody from "./pages/AccountBody";
 import Questions from "./pages/Questions";
