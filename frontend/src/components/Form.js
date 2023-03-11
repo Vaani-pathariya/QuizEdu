@@ -1,5 +1,6 @@
 import React from 'react'
 import './login.css';
+import {Link} from "react-router-dom"
 const Form=()=> {
     return(
         <section>
@@ -9,7 +10,7 @@ const Form=()=> {
         <input type="text" placeholder="username"/> 
         <input type="password" placeholder="password"/>
         <div className="login-btn">Login</div>
-        <p className="signup-line">Don't have an account? <span><a href ="signup">Signup</a></span></p>
+        <p className="signup-line">Don't have an account? <span><Link to="/signup">Signup</Link></span></p>
     </div>
     <div className="cov"></div>
     </section>

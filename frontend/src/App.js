@@ -7,6 +7,7 @@ import CreateQuiz from "./pages/CreateQuiz";
 import AccountBody from "./pages/AccountBody";
 import Questions from "./pages/Questions";
 import Login from './pages/Login';
+import Signup from "./pages/Signup";
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
           <Route path="createquiz" element={<CreateQuiz/>}></Route>
           <Route path="questions" element={<Questions/>}></Route>
         </Route>
+        <Route path="/signup" element={<Signup/>}></Route>
       </Routes>
 
     </div>

@@ -44,7 +44,7 @@
     height: 100%;
     background-image: url("../asserts/backg.png");
 }
-input{
+.cover input{
     border:none;
     background-color:rgb(229,226,226);
     height:4em;
@@ -55,7 +55,7 @@ input{
     padding-left: 20px;
     justify-content: left;
 }
-input:focus{
+.cover input:focus{
     outline-color:rgb(32,177,255);
 }
 .login-btn{
@@ -84,7 +84,7 @@ input:focus{
 a{
     color: rgb(32,177,255);
 }
-button{
+.cover button{
     border-radius: 0;
     border-style: hidden;
     justify-content: left;
