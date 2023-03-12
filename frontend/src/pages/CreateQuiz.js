@@ -28,6 +28,9 @@ const CreateQuiz=()=>{
         set(ref(db,`/Code/${code}`),{
             Initial:"abcdef"
         })
+        set(ref(db,`/Users/52345/codes`),{
+            1:code
+        })
     }
     return (
         <div>

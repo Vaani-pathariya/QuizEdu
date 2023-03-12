@@ -1,8 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import back from "../asserts/backg.png"
 import "./signup.css"
 import {Link} from "react-router-dom"
 const Signup_design=()=>{
+    const [code2,setCode2]=useState(0)
+    const handleClick_code=()=>{
+        //10 digit number generation
+       let max=9999999999;
+       let min=1000000000;
+       let result=Math.floor(Math.random()*(max-min+1))
+       setCode2(result)
+   };
     return (
         <div className='signup-flex'>
             <img src={back} width="50%" height="100%"></img>
