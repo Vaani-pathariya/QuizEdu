@@ -1,6 +1,5 @@
 import { ref,set } from "firebase/database";
 import { useState } from "react";
-import {uid} from 'uid';
 import {Link} from "react-router-dom"
 import {db} from '../firebaseConfig'
 const CreateQuiz=()=>{
